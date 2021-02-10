@@ -1,0 +1,37 @@
+﻿@*
+
+*@
+@{
+    ViewBag.Title = "Suggestions Form";
+}
+@model Assignment4_413.Models.Restaurant
+
+
+<div class="form-group">
+    <form class="form-group" method="post" asp-action="SuggestionForm">
+
+        <label class="col-form-label" asp-for="Name">Enter Name:</label>
+        <input class="" asp-for="Name" />
+        </br>
+
+        <label class="col-form-label" asp-for="RestaurantName">Enter Restaurant Name:</label>
+        <input class="" asp-for="RestaurantName" />
+        </br>
+
+        <label class="col-form-label" asp-for="FavoriteDish">Enter Favorite Dish:</label>
+        <input class="" asp-for="FavoriteDish" />
+        </br>
+
+        <label class="col-form-label" asp-for="PhoneNumber">Enter Phone Number:</label>
+        <input class="" asp-for="PhoneNumber" />
+        </br>
+
+        <input type="submit" class="shadow" />
+        <div asp-validation-summary="All"></div>
+
+        <!--I added two hidden input fields to keep validation for the pre-created fields that the user does not need to suggest-->
+        <input type="hidden" asp-for="Rank" value="0"/>
+        <input type="hidden" asp-for="Address" value="N/A"/>
+
+    </form>
+</div>

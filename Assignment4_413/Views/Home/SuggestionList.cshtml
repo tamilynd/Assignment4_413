@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "User Suggested Restaurants";
+}
+
+@model IEnumerable<Restaurant>
+
+<div>
+    <h2 class="popover-header"> @ViewBag.Title</h2>
+    <table class="table-striped">
+        <thead class="thead-dark">
+            <tr><th class="d-md-table-cell">Name</th><th class="d-md-table-cell">Restaurant</th><th class="d-md-table-cell">Favorite Dish</th><th class="d-md-table-cell">Restaurant Phone #</th></tr>
+        </thead>
+        <tbody>
+            <!--loop through list passed to the model-->
+            @foreach (Restaurant x in Model)
+            {
+                <tr>
+                    <td>@x.Name</td>
+                    <td>@x.RestaurantName</td>
+                    <td>@x.FavoriteDish</td>
+                    <td>@x.PhoneNumber</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
